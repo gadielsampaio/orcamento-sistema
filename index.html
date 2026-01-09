@@ -582,10 +582,10 @@
       if (cliTel) clientHtml += `<br><i>Contato:</i> ${cliTel}`;
       document.getElementById('printClientInfo').innerHTML = clientHtml;
 
-      const veicModelo = document.getElementById('veicModelo').value || '-';
-      const veicPlaca = document.getElementById('veicPlaca').value;
-      const veicCor = document.getElementById('veicCor').value;
-      const veicAno = document.getElementById('veicAno').value;
+      const veicModelo = document.getElementById('veicModelo').value.toUpperCase() || '-';
+      const veicPlaca = document.getElementById('veicPlaca').value.toUpperCase();
+      const veicCor = document.getElementById('veicCor').value.toUpperCase();
+      const veicAno = document.getElementById('veicAno').value.toUpperCase();
       let veicHtml = `<strong>${veicModelo}</strong>`;
       if (veicPlaca) veicHtml += `<br><i>Placa:</i> ${veicPlaca}`;
       if (veicCor || veicAno) veicHtml += `<br>${veicCor || ''} ${veicAno ? '- ' + veicAno : ''}`;
@@ -658,6 +658,7 @@
 </body>
 
 </html>
+
 
 
 
